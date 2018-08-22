@@ -185,5 +185,6 @@ public class QuizActivity extends AppCompatActivity {
     	Log.d(TAG, nameOfMethod);
         Log.d(TAG, "Hello World");
         Log.d(TAG, "Hello World");
+        Log.d(TAG, "Hello World");
     }
 }
