@@ -183,6 +183,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void LOG_METHOD(String nameOfMethod) {
     	Log.d(TAG, nameOfMethod);
-    	Log.d(TAG, "Hello World");
+        Log.d(TAG, "Hello World");
+        Log.d(TAG, "Hello World");
     }
 }
