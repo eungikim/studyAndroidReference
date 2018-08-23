@@ -15,6 +15,9 @@ import android.widget.TextView;
 
 public class CheatActivity extends AppCompatActivity {
     public static final String TAG = "CheatActivity.class.getSimpleName()";
+    public static final String TAG1 = "CheatActivity.class.getSimpleName()";
+    public static final String TAG2 = "CheatActivity.class.getSimpleName()";
+    public static final String TAG3 = "CheatActivity.class.getSimpleName()";
 
     private Button mShowAnswer;
     private TextView mAnswerTextView;
