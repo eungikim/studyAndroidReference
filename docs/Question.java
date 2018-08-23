@@ -8,6 +8,8 @@ import android.util.Log;
  */
 
 public class Question {
+    private static final String TAG = "TAG";
+
     private int mTextResId;
     private boolean mAnswerTrue;
     private boolean mIsCheater;
