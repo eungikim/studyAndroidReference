@@ -9,6 +9,7 @@ import android.util.Log;
 
 public class Question {
     private static final String TAG = "TAG";
+    private static final String TAG1 = "TAG";
 
     private int mTextResId;
     private boolean mAnswerTrue;
