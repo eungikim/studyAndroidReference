@@ -21,18 +21,20 @@ git bash 를 사용한다는 전체하에 작성하였습니다.
 
 레포지토리로 이동하여 좌측 상단에 있는 초록색 Clone or download 버튼을 클릭합니다.
 
+![클론 버튼](/README.img/imgCloneBtn.PNG)
+
 나와있는 url 을 통해 clone 을 받거나 집으로 받아 압축을 풀어주세요.
 
     $git clone https://github.com/user-name/repository-name.git
 
 git bash 에서 해당 디렉토리로 이동 바랍니다.
 
-![클론 버튼](/README.img/imgCloneBtn.PNG)
-
 
 ## 2. 브런치 관리
 
 브런치 관리는 상용 브런치인 master, 개발 브런치인 dev, 개인 브런치인 dev-myname 을 사용합니다.
+
+![브런치 도식도](/README.img/imgBranchModel.jpg)
 
 git bash 에서 브런치를 생성해주세요.
 
@@ -46,8 +48,6 @@ git bash 에서 브런치를 생성해주세요.
 
     $git checkout -b dev-myname
 
-![브런치 도식도](/README.img/imgBranchModel.jpg)
-
 * ### __항상 브런치를 자기 브런치로 유지하는것을 잊지 말아주세요.__
 
 
@@ -59,7 +59,7 @@ git bash 에서 브런치를 생성해주세요.
 
 해당 디렉토리에서 README.md 를 작성하여 공부 범위의 요약 혹은 번역과 요약을 하시면 됩니다.
 
-그 다음 샘플 프로젝트는 위치에 알맞게 fragment\overview 혹은 몇가지 소제목을 아우른다면 fragment\ 안에 만드시면 됩니다. 프로젝트를 자기 workSpace 에 만든 뒤 위의 path 안에 넣는 방법은 검색해보니 없다고 나오네요! (2016 답변)
+그 다음 토이(샘플) 프로젝트는 위치에 알맞게 fragment\overview\ 혹은 몇가지 소제목을 아우른다면 fragment\ 안에 만드시면 됩니다. 다른 workSpace 에 만든 뒤 위의 path 안에 넣는 방법은 검색해보니 없다고 나오네요! (2016년 답변)
 
 .gitignore 는 예제 파일로 바꾸겠습니다.
 >https://github.com/github/gitignore/blob/master/Android.gitignore
@@ -82,7 +82,7 @@ ssh 연동을 안하셨으면 올리실 때 마다 github username 과 password 
 
 -u 옵션을 사용한 다음에는 다음에 git push 만 적으셔도 자동으로 branch 가 기억됩니다.
 
-dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하셔야합니다. 브라우저에서 repository 로 가서 상단의 pull requests 메뉴를 클릭해주세요.
+dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하셔야합니다. 브라우저에서 github repository 로 가서 상단의 pull requests 메뉴를 클릭해주세요.
 
 ![풀리퀘스트 버튼](/README.img/imgPullRequestMenu.PNG)
 
