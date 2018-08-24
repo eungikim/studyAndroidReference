@@ -48,6 +48,8 @@ git bash 에서 브런치를 생성해주세요.
 
 ![브런치 도식도](/README.img/imgBranchModel)
 
+* ### __항상 브런치를 자기 브런치로 유지하는것을 잊지 말아주세요.__
+
 
 ## 3. 작업
 
@@ -80,8 +82,21 @@ ssh 연동을 안하셨으면 올리실 때 마다 github username 과 password 
 
 -u 옵션을 사용한 다음에는 다음에 git push 만 적으셔도 자동으로 branch 가 기억됩니다.
 
-dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하셔야합니다. 브라우저에서 repository 로 가주세요.
+dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하셔야합니다. 브라우저에서 repository 로 가서 상단의 pull requests 메뉴를 클릭해주세요.
 
+![풀리퀘스트 버튼](/README.img/imgPullRequestMenu.PNG)
+
+그러면 최근 풀리퀘스트의 목록이 나옵니다. 옆의 초록색 Compare & pull request 버튼을 눌러주세요.
+
+![풀리퀘스트 목록](/README.img/imgPullRequestList.PNG)
+
+그 다음 풀리퀘스트를 어느 브런치에서 어느 브런치로 할 것인지 선택하는 곳이 나옵니다. 자기 브런치에서 dev 브런치로 선택해주세요. 기본은 master 브런치일 것입니다.
+
+![풀리퀘스트 브런치 선택](/README.img/imgPullRequestBranchCheck.PNG)
+
+아래를 보시면 커밋 로그들과 변경사항이 보입니다. 타이틀과 코멘트를 넣고 Create pull request 버튼을 눌러주시면 됩니다.
+
+그러면 풀리퀘스트가 생성이 되고 풀리퀘스트 메뉴에 1이 나타납니다. 풀리퀘스트를 선택 후 [This branch has no conflicts with the base branch] 문구가 나오면 통합하는데 아무 이상 없는것이니 아래 머지 버튼을 누르시면 됩니다.
 
 
 
