@@ -25,7 +25,8 @@ git bash 를 사용한다는 전체하에 작성하였습니다.
 
 git bash 에서 해당 디렉토리로 이동 바랍니다.
 
-[클론 버튼 이미지]
+![클론 버튼 이미지](/README.img/imgCloneBtn.jpg)
+
 
 ## 2. 브런치 관리
 
