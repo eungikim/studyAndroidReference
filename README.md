@@ -4,7 +4,7 @@
 
 안드로이드 래퍼런스를 공부하기 위해 결성된 스터디입니다. 부천~서울에서 매주 일요일에 모임을 가지고 있습니다.
 
-개인마다 공부하고 싶은 부분을 정해 스터디에 공고 한 뒤 그 부분을 공부하고 요약하여 정리 문서 작성, 토이 프로잭트를 만들어 격주마다 스터디원들에게 발표를 합니다.
+개인마다 공부하고 싶은 부분을 정해 스터디에 공고 한 뒤 그 부분을 공부하고 요약하여 정리 문서 작성, 토이(샘플) 프로잭트를 만들어 격주마다 스터디원들에게 발표를 합니다.
 
 현제 인원을 더 받고 있으므로 znfks8819@naver.com 으로 간단한 소개와 연락처를 적어 메일주세요.
 
@@ -13,7 +13,7 @@
 * 두번째 발표: SHC, KEG
 
 
-# Git hube 작업 방법
+# Github 작업 방법
 git bash 를 사용한다는 전체하에 작성하였습니다.
 >다운로드 : https://gitforwindows.org/
 
@@ -23,11 +23,11 @@ git bash 를 사용한다는 전체하에 작성하였습니다.
 
 나와있는 url 을 통해 clone 을 받거나 집으로 받아 압축을 풀어주세요.
 
-    git clone https://github.com/user-name/repository-name.git
+    $git clone https://github.com/user-name/repository-name.git
 
 git bash 에서 해당 디렉토리로 이동 바랍니다.
 
-![클론 버튼 이미지](/README.img/imgCloneBtn.jpg)
+![클론 버튼](/README.img/imgCloneBtn.PNG)
 
 
 ## 2. 브런치 관리
@@ -36,17 +36,17 @@ git bash 에서 해당 디렉토리로 이동 바랍니다.
 
 git bash 에서 브런치를 생성해주세요.
 
-    git branch dev-myname
+    $git branch dev-myname
 
 브런치로 이동합니다.
 
-    git checkout dev-myname
+    $git checkout dev-myname
 
 한번에 하는 방법
 
-    git checkout -b dev-myname
+    $git checkout -b dev-myname
 
-![브런치 도식도](/README.img/imgBranchModel)
+![브런치 도식도](/README.img/imgBranchModel.jpg)
 
 * ### __항상 브런치를 자기 브런치로 유지하는것을 잊지 말아주세요.__
 
@@ -66,8 +66,8 @@ git bash 에서 브런치를 생성해주세요.
 
 git bash 에서 해당 프로젝트를 리모트 리포지토리로 올리겠습니다. 각각의 명령어에 대해 바뀌는 파일의 상태는 따로 공부해주세요.
 
-    git add * 
-    git commit -m "sample project1 first commit" 
+    $git add * 
+    $git commit -m "sample project1 first commit" 
 
 그 후 코드를 수정하면서 변경사항이 생길 때 마다 위와 같은 명령어로 local branch 에 기록하시면 됩니다. 안드로이드 스튜디오에서 git 을 추가하여 사용도 가능합니다. 그러면 untracked 파일은 빨간색으로 modify 된 폴더는 초록색으로 나옵니다. 그 방법은 따로 적지 않겠습니다.
 
@@ -76,7 +76,7 @@ git bash 에서 해당 프로젝트를 리모트 리포지토리로 올리겠습
 
 각자 dev-myname 브런치에서 작업을 하셨을겁니다. 그러면 이 브런치에서 수정한 것을 remote repository 에 올리겠습니다.
 
-    git push -u origin dev-myname
+    $git push -u origin dev-myname
 
 ssh 연동을 안하셨으면 올리실 때 마다 github username 과 password 를 적어야합니다.
 
@@ -98,11 +98,12 @@ dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하�
 
 그러면 풀리퀘스트가 생성이 되고 풀리퀘스트 메뉴에 1이 나타납니다. 풀리퀘스트를 선택 후 [This branch has no conflicts with the base branch] 문구가 나오면 통합하는데 아무 이상 없는것이니 아래 머지 버튼을 누르시면 됩니다.
 
+사실 풀리퀘스트를 자기가 날리고 자기가 그것을 승인하는것은 번거로운 작업입니다. 현제는 레포지토리에 스터디원 분들을 협업자로 적어서 모든 권한을 가지기 때문에 직접 마스터 브런치에서 작업을 할 수 도 있었는데요. 추후에 조직을 구성해서 권한까지 조절할 생각이기 떄문에 이런 기존의 협업 프로세스를 사용해주셨으면 합니다.
 
 
 ## 5. 다시 작업
 
-작업을 개시하기 전에 최신 작업상황을 받고 싶으시다면 pull 명령어를 사용하시면 됩니다.
+작업을 개시하기 전에 최신 작업상황을 받고 싶으시다면 pull 명령어를 사용하시면 됩니다. 이는 fetch 명렁어와 merge 명령어가 합쳐진 것입니다.
 
 자기 브런치에서 최신 사항을 받습니다. 남이 자기의 브런치를 수정했을 경우에 할 수 있습니다.
 
@@ -115,3 +116,8 @@ dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하�
     $git pull origin master
 
 * ### __항상 브런치를 자기 브런치로 유지하는것을 잊지 말아주세요.__
+
+
+## 6. 에러 해결
+
+추후 적음
