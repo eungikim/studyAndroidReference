@@ -56,3 +56,11 @@ git bash 에서 브런치를 생성해주세요.
 
 그 다음 샘플 프로젝트는 위치에 알맞게 fragment\overview 혹은 몇가지 소제목을 아우른다면 fragment\ 안에 만드시면 됩니다. 프로젝트를 자기 workSpace 에 만든 뒤 위의 path 안에 넣는 방법은 검색해보니 없다고 나오네요! (2016 답변)
 
+.gitignore 는 예제 파일로 바꾸겠습니다.
+>https://github.com/github/gitignore/blob/master/Android.gitignore
+
+git bash 에서 해당 프로젝트를 리모트 리포지토리로 올리겠습니다. 각각의 명령어에 대해 바뀌는 파일의 상태는 따로 공부해주세요.
+
+>git add *
+>git commit -m "sample project1 first commit"
+>git push -u origin branch-name
