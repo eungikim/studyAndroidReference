@@ -43,7 +43,7 @@ git bash 에서 브런치를 생성해주세요.
 한번에 하는 방법
 >git checkout -b dev-myname
 
-[브런치 도식도 이미지]
+![브런치 도식도](/README.img/imgBranchModel)
 
 ## 3. 작업
 
