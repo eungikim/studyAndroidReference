@@ -46,6 +46,7 @@ git bash 에서 브런치를 생성해주세요.
 
 ![브런치 도식도](/README.img/imgBranchModel)
 
+
 ## 3. 작업
 
 해당 브런치에서 각자 자기가 공고한 공부할 부분의 디렉토리를 생성합니다.
@@ -61,6 +62,24 @@ git bash 에서 브런치를 생성해주세요.
 
 git bash 에서 해당 프로젝트를 리모트 리포지토리로 올리겠습니다. 각각의 명령어에 대해 바뀌는 파일의 상태는 따로 공부해주세요.
 
->git add *
->git commit -m "sample project1 first commit"
->git push -u origin branch-name
+>git add * 
+
+>git commit -m "sample project1 first commit" 
+
+>git push -u origin branch-name 
+
+그 후 코드를 수정하면서 변경사항이 생길 때 마다 위와 같은 명령어로 local branch 에 기록하시면 됩니다. 안드로이드 스튜디오에서 git 을 추가하여 사용도 가능합니다. 그러면 untracked 파일은 빨간색으로 modify 된 폴더는 초록색으로 나옵니다. 그 방법은 따로 적지 않겠습니다.
+
+
+## 4. 통합
+
+각자 dev-myname 브런치에서 작업을 하셨을겁니다. 그러면 이 브런치에서 수정한 것을 remote repository 에 올리겠습니다.
+
+>git push -u origin dev-myname
+
+ssh 연동을 안하셨으면 올리실 때 마다 github username 과 password 를 적어야합니다.
+
+-u 옵션을 사용한 다음에는 다음에 git push 만 적으셔도 자동으로 branch 가 기억됩니다.
+
+dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하셔야합니다. 브라우저에서 repository 로 가주세요.
+
