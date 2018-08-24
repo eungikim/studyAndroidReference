@@ -22,6 +22,7 @@ git bash 를 사용한다는 전체하에 작성하였습니다.
 레포지토리로 이동하여 좌측 상단에 있는 초록색 Clone or download 버튼을 클릭합니다.
 
 나와있는 url 을 통해 clone 을 받거나 집으로 받아 압축을 풀어주세요.
+>git clone https://github.com/user-name/repository-name.git
 
 git bash 에서 해당 디렉토리로 이동 바랍니다.
 
@@ -49,5 +50,9 @@ git bash 에서 브런치를 생성해주세요.
 
 해당 브런치에서 각자 자기가 공고한 공부할 부분의 디렉토리를 생성합니다.
 
->\studyAndroidReference\docs\guides\activities\fragment
+>\studyAndroidReference\docs\guides\activities\fragment\overveiw\
+
+해당 디렉토리에서 README.md 를 작성하여 공부 범위의 요약 혹은 번역과 요약을 하시면 됩니다.
+
+그 다음 샘플 프로젝트는 위치에 알맞게 fragment\overview 혹은 몇가지 소제목을 아우른다면 fragment\ 안에 만드시면 됩니다. 프로젝트를 자기 workSpace 에 만든 뒤 위의 path 안에 넣는 방법은 검색해보니 없다고 나오네요! (2016 답변)
 
