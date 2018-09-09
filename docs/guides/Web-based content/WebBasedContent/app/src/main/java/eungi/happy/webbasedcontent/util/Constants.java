@@ -15,13 +15,13 @@ public class Constants {
 
     public interface WEB_URL {
         String PRODUCT = "http://13.125.90.107:8083";
-        String DEV = "http://13.125.90.107:8083";
+        String DEV = "https://admin.livoncare.com";
         String LOCAL = "http://192.168.1.55:8080";
     }
     public interface WEB_PATH {
         String LOGIN = "/login";
         String LOGIN_ = "/login/loginProc";
-        String DASHBOARD = "/dashboard/dashboard";
+        String DASHBOARD = "/test.html";
         String LIVONCARE = "/dashboard/aix";
     }
 

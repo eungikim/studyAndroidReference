@@ -13,7 +13,9 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
@@ -100,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint({"AddJavascriptInterface", "SetJavaScriptEnabled"})
     private void setWebViewSettings() {
+        mWebView.clearCache(true);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
@@ -145,13 +148,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public interface WebViewInterface {
-        void activeRecognizer();
+        void callback(String msg);
+        void toast(String msg);
     }
 
     public WebViewInterface mWebViewInterface = new WebViewInterface() {
         @Override
-        public void activeRecognizer() {
-            Log.d(TAG, "activeRecognizer: ");
+        public void callback(String msg) {
+            Log.d(TAG, "callback() called with: msg = [" + msg + "]");
+            runOnUiThread(() ->
+                    mWebView.loadUrl("javascript:button1_callback('"+msg+"')")
+            );
+        }
+
+        @Override
+        public void toast(String msg) {
+            Log.d(TAG, "toast() called with: msg = [" + msg + "]");
+            Snackbar.make(mWebView, msg, Snackbar.LENGTH_LONG).show();
         }
     };
 
