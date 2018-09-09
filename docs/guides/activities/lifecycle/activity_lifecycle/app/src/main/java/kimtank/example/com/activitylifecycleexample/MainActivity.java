@@ -161,4 +161,8 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.e(TAG, "onDestroy: 2");
     }
+
+    /*
+    * 화면생명주기 http://stex.tistory.com/22 참고
+    * */
 }
