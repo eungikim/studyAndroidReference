@@ -108,7 +108,7 @@ dev-myname remote repository 에 올리셨다면 dev 브런치로 통합을 하�
 자기 브런치에서 최신 사항을 받습니다. 남이 자기의 브런치를 수정했을 경우에 할 수 있습니다.
 
     $git checkout dev-myname
-    $git pull
+    $git pull origin dev-myname
 
 통합 브런치에서 최신 사항을 받습니다. 다른 사람들의 작업물까지 받기 위해 사용합니다.
 
