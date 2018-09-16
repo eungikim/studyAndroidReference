@@ -1,27 +1,13 @@
 package eungi.happy.webbasedcontent;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
@@ -51,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         setWebViewSettings();
 
+        // build flavor 를 통한 url 변경
         String baseUrl = Constants.WEB_URL.PRODUCT;
         switch (BuildConfig.BUILD_MODE) {
             case Constants.BUILD_MODE.DEV:
@@ -83,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    // 웹뷰 네비게이션
     @Override
     public void onBackPressed() {
         String path = getWebViewPath();
@@ -102,10 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint({"AddJavascriptInterface", "SetJavaScriptEnabled"})
     private void setWebViewSettings() {
-        mWebView.clearCache(true);
+        //mWebView.clearCache(true);
         WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
+        webSettings.setJavaScriptEnabled(true); // 필수
+        webSettings.setDomStorageEnabled(true); // 필수
+        // 쿠키 싱크
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
             CookieManager cookieManager = CookieManager.getInstance();
@@ -113,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
             cookieManager.setAcceptThirdPartyCookies(mWebView, true);
         }
 
-        mWebView.setWebViewClient(new WebViewClient() {});
-        mWebView.setWebChromeClient(new MyWebChromeClient() {});
+        mWebView.setWebViewClient(new WebViewClient() {}); // 필수
+        mWebView.setWebChromeClient(new MyWebChromeClient() {}); // 필수
         mWebView.addJavascriptInterface(new WebAppInterface(mWebViewInterface), "Android");
 
         WebView.setWebContentsDebuggingEnabled(true);
