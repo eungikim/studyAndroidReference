@@ -11,15 +11,15 @@ import eungi.happy.webbasedcontent.MainActivity;
 public class WebAppInterface {
 
     private MainActivity.WebViewInterface mWebViewInterface;
-    private SharedPreferences mPreferences;
 
     public WebAppInterface(MainActivity.WebViewInterface webViewInterface) {
         mWebViewInterface = webViewInterface;
     }
 
     @JavascriptInterface
-    public void activeRecognizer() {
-        mWebViewInterface.activeRecognizer();
+    public void setTopicData(String message) {
+        mWebViewInterface.toast(message);
+        mWebViewInterface.callback(message);
     }
 
 
