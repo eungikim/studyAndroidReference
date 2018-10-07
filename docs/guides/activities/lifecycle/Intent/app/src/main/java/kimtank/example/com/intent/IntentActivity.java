@@ -26,6 +26,7 @@ public class IntentActivity extends AppCompatActivity {
         textView.setTextSize(30.0f);
 
         intent = new Intent(this, MainActivity.class);
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

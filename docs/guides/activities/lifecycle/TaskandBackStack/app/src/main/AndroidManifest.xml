@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kimtank.example.com.taskandbackstack">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--standard-->
+        <!--<activity android:name=".AActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BActivity"/>
+        <activity android:name=".CActivity"/>
+        <activity android:name=".DActivity"/>
+        <activity android:name=".EActivity"/>-->
+
+        <!--singleTop-->
+        <!--<activity android:name=".AActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".CActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".DActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".EActivity"
+            android:launchMode="singleTop"/>-->
+
+        <!--singleTask-->
+        <!--<activity android:name=".AActivity"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".CActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".DActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".EActivity"
+            android:launchMode="singleTask"
+            />-->
+
+        <!--singleInstanse-->
+       <!-- <activity
+            android:name=".AActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".CActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".DActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"/>
+        <activity
+            android:name=".EActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"/>-->
+    </application>
+
+
+</manifest>
